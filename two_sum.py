@@ -6,13 +6,15 @@ class Solution:
         :rtype: List[int]
         """
         if target in nums and 0 in nums:
-            print ("in if case")
             return nums.index(target),nums.index(0)
         else:
-            print ("in else case")
             for each_num in nums:
-                if each_num in nums and (target-each_num) in nums and nums.index(each_num) != nums.index(target-each_num):
-                    
+                if each_num in nums and (target-each_num) in nums and nums.index(each_num) != nums.index(target-each_num):     
                     return nums.index(each_num),nums.index(target-each_num)
-                    
+                
+                
+s1 = Solution()
+nums = [1,3,2,11,4]
+target = 5
+print (s1.twoSum(nums,target))
         
